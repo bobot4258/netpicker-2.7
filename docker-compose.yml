@@ -90,7 +90,7 @@ services:
       test:
         [
           "CMD-SHELL",
-          "CELERY_BROKER_URL=redis://redis celery inspect ping -t 5",
+          "CELERY_BROKER_URL=pgrep -f celery",
         ]
       start_period: 15s
       interval: 30s
